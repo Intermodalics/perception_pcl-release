@@ -1,0 +1,36 @@
+From 0e4fdac299f0e1238aa972842af3b8f4a05f8516 Mon Sep 17 00:00:00 2001
+From: Johannes Meyer <johannes@intermodalics.eu>
+Date: Fri, 9 Nov 2018 14:58:13 +0100
+Subject: [PATCH] Switch to PCL 1.8+
+
+---
+ debian/control.em | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+
+diff --git a/debian/control.em b/debian/control.em
+index 7cbf65a..95d348e 100644
+--- a/debian/control.em
++++ b/debian/control.em
+@@ -2,13 +2,16 @@ Source: @(Package)
+ Section: misc
+ Priority: extra
+ Maintainer: @(Maintainer)
+-Build-Depends: debhelper (>= @(debhelper_version).0.0), @(', '.join(BuildDepends))
++Build-Depends: debhelper (>= @(debhelper_version).0.0), libpcl-dev (>= 1.8), @(', '.join(BuildDepends))
+ Homepage: @(Homepage)
+ Standards-Version: 3.9.2
+ 
+-Package: @(Package)
++Package: @(Package)-pcl-1.8
++Provides: @(Package)
++Conflicts: @(Package)
++Replaces: @(Package)
+ Architecture: any
+-Depends: ${shlibs:Depends}, ${misc:Depends}, @(', '.join(Depends))
++Depends: ${shlibs:Depends}, ${misc:Depends}, libpcl-dev (>= 1.8), @(', '.join(Depends))
+ @[if Conflicts]Conflicts: @(', '.join(Conflicts))@\n@[end if]@
+ @[if Replaces]Replaces: @(', '.join(Replaces))@\n@[end if]@
+ Description: @(Description)
+-- 
+2.7.4
+
