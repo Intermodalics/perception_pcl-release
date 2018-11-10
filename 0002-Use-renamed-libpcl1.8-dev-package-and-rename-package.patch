@@ -1,0 +1,37 @@
+From 461695bccfbacb44743a6abd4dc23b962968cdaa Mon Sep 17 00:00:00 2001
+From: Johannes Meyer <johannes@intermodalics.eu>
+Date: Sat, 10 Nov 2018 01:37:06 +0100
+Subject: [PATCH 2/2] Use renamed libpcl1.8-dev package and rename package to
+ ros-kinetic-pcl1.8-conversions
+
+---
+ debian/control.em | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/debian/control.em b/debian/control.em
+index 95d348e..a627cfa 100644
+--- a/debian/control.em
++++ b/debian/control.em
+@@ -2,16 +2,16 @@ Source: @(Package)
+ Section: misc
+ Priority: extra
+ Maintainer: @(Maintainer)
+-Build-Depends: debhelper (>= @(debhelper_version).0.0), libpcl-dev (>= 1.8), @(', '.join(BuildDepends))
++Build-Depends: debhelper (>= @(debhelper_version).0.0), libpcl1.8-dev, @(', '.join(BuildDepends))
+ Homepage: @(Homepage)
+ Standards-Version: 3.9.2
+ 
+-Package: @(Package)-pcl-1.8
++Package: ros-kinetic-pcl1.8-conversions
+ Provides: @(Package)
+ Conflicts: @(Package)
+ Replaces: @(Package)
+ Architecture: any
+-Depends: ${shlibs:Depends}, ${misc:Depends}, libpcl-dev (>= 1.8), @(', '.join(Depends))
++Depends: ${shlibs:Depends}, ${misc:Depends}, libpcl1.8-dev, @(', '.join(Depends))
+ @[if Conflicts]Conflicts: @(', '.join(Conflicts))@\n@[end if]@
+ @[if Replaces]Replaces: @(', '.join(Replaces))@\n@[end if]@
+ Description: @(Description)
+-- 
+2.7.4
+
