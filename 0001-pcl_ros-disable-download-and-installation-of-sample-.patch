@@ -1,0 +1,51 @@
+From 8caf601cc3a01a06bd2b271d3cc9e4b6a9bdf457 Mon Sep 17 00:00:00 2001
+From: Johannes Meyer <johannes@intermodalics.eu>
+Date: Sat, 10 Nov 2018 00:52:16 +0100
+Subject: [PATCH] pcl_ros: disable download and installation of sample data
+
+---
+ CMakeLists.txt | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 7d84568..cbfb1a3 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -196,19 +196,19 @@ target_link_libraries(convert_pcd_to_image ${Boost_LIBRARIES} ${catkin_LIBRARIES
+ add_executable(convert_pointcloud_to_image tools/convert_pointcloud_to_image.cpp)
+ target_link_libraries(convert_pointcloud_to_image ${Boost_LIBRARIES} ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+ 
+-## Downloads
+-
+-catkin_download(table_scene_lms400.pcd http://download.ros.org/data/pcl/table_scene_lms400.pcd
+-  DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/samples/data
+-  MD5 546b5b4822fb1de21b0cf83d41ad6683
+-)
+-add_custom_target(download ALL DEPENDS download_extra_data)
+-
+ #############
+ ## Testing ##
+ #############
+ 
+ if(CATKIN_ENABLE_TESTING)
++  ## Downloads
++
++  catkin_download(table_scene_lms400.pcd http://download.ros.org/data/pcl/table_scene_lms400.pcd
++    DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/samples/data
++    MD5 546b5b4822fb1de21b0cf83d41ad6683
++  )
++  add_custom_target(download ALL DEPENDS download_extra_data)
++
+   find_package(rostest REQUIRED)
+   add_rostest_gtest(test_tf_message_filter_pcl tests/test_tf_message_filter_pcl.launch src/test/test_tf_message_filter_pcl.cpp)
+   target_link_libraries(test_tf_message_filter_pcl ${catkin_LIBRARIES} ${GTEST_LIBRARIES})
+@@ -241,5 +241,5 @@ install(
+   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+ )
+ 
+-install(DIRECTORY plugins samples
++install(DIRECTORY plugins
+   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+-- 
+2.7.4
+
