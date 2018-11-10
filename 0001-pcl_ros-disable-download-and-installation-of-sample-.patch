@@ -1,4 +1,4 @@
-From 8caf601cc3a01a06bd2b271d3cc9e4b6a9bdf457 Mon Sep 17 00:00:00 2001
+From 58d86c7845dd52a593b9d2e5da2f5398ab58e612 Mon Sep 17 00:00:00 2001
 From: Johannes Meyer <johannes@intermodalics.eu>
 Date: Sat, 10 Nov 2018 00:52:16 +0100
 Subject: [PATCH] pcl_ros: disable download and installation of sample data
