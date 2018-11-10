@@ -7,7 +7,7 @@ Homepage: @(Homepage)
 Standards-Version: 3.9.2
 
 Package: ros-kinetic-pcl1.8-ros
-Provides: @(Package)
+#Provides: @(Package)
 Conflicts: @(Package)
 Replaces: @(Package)
 Architecture: any
