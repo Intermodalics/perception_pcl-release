@@ -1,7 +1,7 @@
-From 0dd519e6d4f3f24c98f8f9f161897d9e24d705d6 Mon Sep 17 00:00:00 2001
+From ab54c3bf8d581d4e8f621cd4a631f482dd43f691 Mon Sep 17 00:00:00 2001
 From: Johannes Meyer <johannes@intermodalics.eu>
 Date: Sat, 10 Nov 2018 01:37:06 +0100
-Subject: [PATCH 2/2] Use renamed libpcl1.8-dev package and rename package to
+Subject: [PATCH 2/3] Use renamed libpcl1.8-dev package and rename package to
  ros-kinetic-perception-pcl1.8
 
 ---

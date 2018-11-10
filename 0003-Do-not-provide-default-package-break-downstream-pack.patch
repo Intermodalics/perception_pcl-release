@@ -1,0 +1,26 @@
+From f1ee751f4634d332a267790b76a51307d784d352 Mon Sep 17 00:00:00 2001
+From: Johannes Meyer <johannes@intermodalics.eu>
+Date: Sat, 10 Nov 2018 02:01:19 +0100
+Subject: [PATCH 3/3] Do not provide default package - break downstream
+ packages instead
+
+---
+ debian/control.em | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/debian/control.em b/debian/control.em
+index c8305e9..4258d38 100644
+--- a/debian/control.em
++++ b/debian/control.em
+@@ -7,7 +7,7 @@ Homepage: @(Homepage)
+ Standards-Version: 3.9.2
+ 
+ Package: ros-kinetic-perception-pcl1.8
+-Provides: @(Package)
++#Provides: @(Package)
+ Conflicts: @(Package)
+ Replaces: @(Package)
+ Architecture: any
+-- 
+2.7.4
+
