@@ -7,7 +7,7 @@ Homepage: @(Homepage)
 Standards-Version: 3.9.2
 
 Package: ros-kinetic-perception-pcl1.8
-Provides: @(Package)
+#Provides: @(Package)
 Conflicts: @(Package)
 Replaces: @(Package)
 Architecture: any
