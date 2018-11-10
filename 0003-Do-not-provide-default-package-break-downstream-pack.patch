@@ -1,0 +1,26 @@
+From 539c27ce78b3ca52ab6bd7ba698c16a472c1277a Mon Sep 17 00:00:00 2001
+From: Johannes Meyer <johannes@intermodalics.eu>
+Date: Sat, 10 Nov 2018 02:01:19 +0100
+Subject: [PATCH 3/3] Do not provide default package - break downstream
+ packages instead
+
+---
+ debian/control.em | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/debian/control.em b/debian/control.em
+index a627cfa..335a644 100644
+--- a/debian/control.em
++++ b/debian/control.em
+@@ -7,7 +7,7 @@ Homepage: @(Homepage)
+ Standards-Version: 3.9.2
+ 
+ Package: ros-kinetic-pcl1.8-conversions
+-Provides: @(Package)
++#Provides: @(Package)
+ Conflicts: @(Package)
+ Replaces: @(Package)
+ Architecture: any
+-- 
+2.7.4
+

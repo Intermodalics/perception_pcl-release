@@ -1,7 +1,7 @@
-From 461695bccfbacb44743a6abd4dc23b962968cdaa Mon Sep 17 00:00:00 2001
+From b83641f9c780ecb8156c97f5b750c8e719007058 Mon Sep 17 00:00:00 2001
 From: Johannes Meyer <johannes@intermodalics.eu>
 Date: Sat, 10 Nov 2018 01:37:06 +0100
-Subject: [PATCH 2/2] Use renamed libpcl1.8-dev package and rename package to
+Subject: [PATCH 2/3] Use renamed libpcl1.8-dev package and rename package to
  ros-kinetic-pcl1.8-conversions
 
 ---
