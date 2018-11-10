@@ -1,0 +1,16 @@
+Source: ros-kinetic-perception-pcl
+Section: misc
+Priority: extra
+Maintainer: Paul Bovbel <paul@bovbel.com>
+Build-Depends: debhelper (>= 9.0.0), libpcl1.8-dev, ros-kinetic-catkin
+Homepage: http://ros.org/wiki/perception_pcl
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-perception-pcl1.8
+Provides: ros-kinetic-perception-pcl
+Conflicts: ros-kinetic-perception-pcl
+Replaces: ros-kinetic-perception-pcl
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libpcl1.8-dev, ros-kinetic-pcl-msgs, ros-kinetic-pcl1.8-conversions, ros-kinetic-pcl1.8-ros
+Description: PCL (Point Cloud Library) ROS interface stack.
+ PCL-ROS is the preferred bridge for 3D applications involving n-D Point Clouds and 3D geometry processing in ROS.
