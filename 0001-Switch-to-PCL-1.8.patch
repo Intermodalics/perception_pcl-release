@@ -1,7 +1,7 @@
-From b14fd216810dd197aa85033c5c4726da3eb3ee97 Mon Sep 17 00:00:00 2001
+From 7aaa1a91d3fda8d3ad351acc034b3c37768854fd Mon Sep 17 00:00:00 2001
 From: Johannes Meyer <johannes@intermodalics.eu>
 Date: Fri, 9 Nov 2018 14:58:13 +0100
-Subject: [PATCH] Switch to PCL 1.8+
+Subject: [PATCH 1/2] Switch to PCL 1.8+
 
 ---
  debian/control.em | 9 ++++++---
